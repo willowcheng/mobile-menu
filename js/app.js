@@ -18,8 +18,14 @@ $("#menu a").each(function() {
   $select.append($option);
 });
 //Create button
+var $button = $("<button>Go</button>");
+$("#menu").append($button);
 //Bind click to button
+$button.click(function () {
   //Go to select's location
+  window.location = $select.val();
+});
+
 //Modify CSS to hide links on small resolution and show button and select
   //Also hides select and button on larger resolution and show's links
 //Deal with selected options depending on current page
