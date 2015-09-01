@@ -10,6 +10,10 @@ $("#menu a").each(function() {
   //Create an option
   var $option = $("<option></option>");
 
+  //Deal with selected options depending on current page
+  if($anchor.parent().hasClass("selected")) {
+    $option.prop("selected", true);
+  }
   //option's value is the href
   $option.val($anchor.attr("href"));
   //option's text is the text of links
@@ -25,7 +29,3 @@ $button.click(function () {
   //Go to select's location
   window.location = $select.val();
 });
-
-//Modify CSS to hide links on small resolution and show button and select
-  //Also hides select and button on larger resolution and show's links
-//Deal with selected options depending on current page
